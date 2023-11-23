@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- js -->
+    <script src="./js/jquery-1.12.4 .js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="header-area">
+            <div class="container">
+                <div class="logo-menu-wrap">
+                    <a href="#none" class="header-logo">
+                        <svg viewBox="0 0 160 32" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_34_2)">
+                            <path d="M11.4977 7.66553C9.22385 7.66553 7.00104 8.33976 5.11034 9.60297C3.21963 10.8662 1.74594 12.6616 0.875592 14.7623C0.00524255 16.863 -0.22268 19.1746 0.220643 21.4049C0.663965 23.6351 1.75862 25.6838 3.36621 27.2919C4.9738 28.9001 7.02213 29.9954 9.25221 30.4395C11.4823 30.8836 13.794 30.6565 15.895 29.7869C17.996 28.9172 19.7919 27.4441 21.0558 25.5539C22.3196 23.6636 22.9946 21.441 22.9954 19.1672C22.9959 17.6569 22.6989 16.1614 22.1213 14.766C21.5438 13.3706 20.6969 12.1026 19.6292 11.0345C18.5615 9.96644 17.2938 9.11917 15.8986 8.54111C14.5034 7.96305 13.0079 7.66553 11.4977 7.66553ZM11.4977 27.6C9.8304 27.5989 8.20083 27.1036 6.815 26.1765C5.42917 25.2495 4.3493 23.9324 3.71191 22.3917C3.07452 20.8511 2.90822 19.156 3.23403 17.5208C3.55985 15.8857 4.36315 14.3838 5.54239 13.2051C6.72163 12.0264 8.22386 11.2238 9.85918 10.8988C11.4945 10.5737 13.1895 10.7408 14.7298 11.3789C16.2702 12.017 17.5868 13.0975 18.5132 14.4838C19.4396 15.8701 19.9342 17.4999 19.9344 19.1672C19.9344 20.2744 19.7163 21.3708 19.2926 22.3938C18.8689 23.4167 18.2478 24.3462 17.4649 25.1291C16.682 25.9121 15.7525 26.5331 14.7295 26.9568C13.7066 27.3806 12.6102 27.5986 11.503 27.5986" fill="white"/>
+                            <path d="M47.882 11.3639C46.313 9.6642 44.2678 8.47724 42.0136 7.95815C39.7594 7.43906 37.4011 7.61198 35.2467 8.45431C33.0923 9.29664 31.2421 10.7692 29.9378 12.6796C28.6335 14.59 27.9358 16.8494 27.9358 19.1626C27.9358 21.4758 28.6335 23.7352 29.9378 25.6456C31.2421 27.556 33.0923 29.0286 35.2467 29.8709C37.4011 30.7133 39.7594 30.8862 42.0136 30.3671C44.2678 29.848 46.313 28.6611 47.882 26.9613V30.278H50.9509V0H47.882V11.3639ZM39.4505 27.5948C37.783 27.5948 36.1528 27.1003 34.7663 26.1738C33.3797 25.2473 32.299 23.9305 31.6609 22.3899C31.0227 20.8492 30.8558 19.1539 31.1811 17.5184C31.5064 15.8828 32.3094 14.3805 33.4886 13.2013C34.6678 12.0222 36.1701 11.2191 37.8057 10.8938C39.4412 10.5685 41.1365 10.7355 42.6771 11.3736C44.2178 12.0118 45.5346 13.0925 46.4611 14.479C47.3875 15.8656 47.882 17.4957 47.882 19.1633C47.882 21.3994 46.9937 23.544 45.4125 25.1252C43.8313 26.7064 41.6867 27.5948 39.4505 27.5948Z" fill="white"/>
+                            <path d="M68.2191 7.66563C66.1457 7.66475 64.1107 8.22452 62.3295 9.2857C60.5482 10.3469 59.0871 11.8699 58.1008 13.6937C57.1145 15.5174 56.6396 17.5739 56.7265 19.6454C56.8135 21.717 57.4589 23.7264 58.5946 25.4611C59.7303 27.1958 61.3139 28.5911 63.1777 29.4993C65.0416 30.4075 67.1164 30.7948 69.1824 30.6202C71.2484 30.4456 73.2287 29.7156 74.9137 28.5075C76.5987 27.2994 77.9257 25.6581 78.7541 23.7574H75.2814C74.3625 25.1696 73.0412 26.2737 71.4884 26.9272C69.9355 27.5807 68.2224 27.7536 66.5703 27.4234C64.9182 27.0933 63.403 26.2753 62.2206 25.0752C61.0381 23.8751 60.2427 22.348 59.9371 20.6912H79.6092C79.84 19.0653 79.7175 17.4087 79.2502 15.8344C78.7829 14.2601 77.9817 12.805 76.9012 11.5683C75.8207 10.3316 74.4863 9.34238 72.989 8.668C71.4916 7.99361 69.8665 7.64994 68.2243 7.66039M59.9384 17.6276C60.2955 15.6908 61.3199 13.9404 62.8335 12.6804C64.347 11.4204 66.2542 10.7304 68.2236 10.7304C70.1931 10.7304 72.1002 11.4204 73.6138 12.6804C75.1274 13.9404 76.1518 15.6908 76.5089 17.6276H59.9384Z" fill="white"/>
+                            <path d="M157.392 19.1671C157.393 16.3201 156.34 13.5735 154.434 11.4583C152.529 9.34308 149.906 8.00951 147.075 7.7154C144.243 7.42128 141.403 8.18751 139.103 9.86594C136.803 11.5444 135.208 14.0158 134.624 16.8024C134.041 19.589 134.512 22.4929 135.945 24.9527C137.379 27.4125 139.673 29.2534 142.385 30.1196C145.098 30.9857 148.034 30.8156 150.628 29.6422C153.222 28.4687 155.289 26.3752 156.429 23.7664H152.956C152.037 25.1785 150.716 26.2827 149.163 26.9362C147.61 27.5897 145.897 27.7625 144.245 27.4324C142.593 27.1023 141.078 26.2843 139.895 25.0842C138.713 23.8841 137.917 22.357 137.612 20.7002H157.284C157.356 20.1922 157.393 19.68 157.397 19.1671M137.613 17.634C137.97 15.6972 138.995 13.9467 140.508 12.6867C142.022 11.4267 143.929 10.7368 145.898 10.7368C147.868 10.7368 149.775 11.4267 151.289 12.6867C152.802 13.9467 153.827 15.6972 154.184 17.634H137.613Z" fill="white"/>
+                            <path d="M120.593 17.095C115.889 16.4013 114.218 15.8137 114.218 13.9016C114.218 11.9344 116.719 10.4419 120.037 10.4419C123.2 10.4419 125.448 11.7914 126.11 14.0655H129.49C128.845 10.0498 125.34 7.66553 120.037 7.66553C113.768 7.66553 110.911 10.9665 110.911 14.0327C110.911 18.0432 114.257 19.2786 120.035 20.0537C125.795 20.7777 126.887 21.9501 126.887 23.857C126.887 25.836 124.694 27.8413 120.505 27.8413C116.921 27.8413 114.142 26.1495 113.486 23.6039H110.123C110.91 27.9672 114.845 30.6596 120.506 30.6596C126.216 30.6596 130.052 27.8386 130.052 23.6393C130.052 18.855 126.132 17.9082 120.594 17.0937" fill="white"/>
+                            <path d="M96.5809 7.66553H93.3993C92.3512 7.74756 91.3352 8.06506 90.4269 8.59437C89.5186 9.12369 88.7414 9.85116 88.1534 10.7226V8.04717H85.0872V30.2518H88.1534V16.0747C88.1575 14.6542 88.7246 13.2933 89.7302 12.2902C90.7359 11.287 92.0982 10.7233 93.5186 10.7226H96.5849C98.0067 10.7233 99.3702 11.288 100.376 12.2929C101.382 13.2978 101.948 14.6608 101.95 16.0826V30.2465H105.016V16.0826C105.016 14.9762 104.797 13.8808 104.373 12.859C103.949 11.8372 103.327 10.9089 102.544 10.1273C101.761 9.34562 100.832 8.7259 99.8095 8.3035C98.787 7.88111 97.6912 7.66433 96.5849 7.66553" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_34_2">
+                            <rect width="160" height="31.4754" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>         
+                    </a>
+        
+                    <ul class="main-menu">
+                        <li class="menu-box">
+                            <a href="#none" class="menu">COLLECTION</a>
+                            <ul class="sub-menu collection">
+                                <li class="sub-menu-body">
+                                    <a href="#none">UN-FRAME</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">LEGJODT</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">NORD</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">SISSONNE</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">LAGODA</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-box">
+                            <a href="#none" class="menu">PRODUCT</a>
+                            <ul class="sub-menu product">
+                                <li class="sub-menu-body">
+                                    <a href="#none">ALL</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">PLATES</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">BOWLS</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">MUGS & CUPS</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">CUTLERY</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">UTENSIL</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">SETS</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">COOKWARE</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">HOME DECO</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">TUMBLERS</a>
+                                </li>
+                            </ul>
+                        </li>
+                           
+                       <li class="menu-box">
+                           <a href="#none" class="menu">GIFT</a>
+                       </li>
+                       <li class="menu-box">
+                            <a href="#none" class="menu">STORES</a>
+                            <ul class="sub-menu store">
+                                <li class="sub-menu-body">
+                                    <a href="#none">플래그쉽</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">백화점</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">아울렛</a>
+                                </li>
+                                <li class="sub-menu-body">
+                                    <a href="#none">복합쇼핑몰</a>
+                                </li>
+                            </ul>
+                       </li>
+                    </ul>
+                </div>
+                <div class="icon-box">
+                    <a href="#none" class="icon search">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10.8 17.4002C14.4451 17.4002 17.4 14.4453 17.4 10.8002C17.4 7.15512 14.4451 4.2002 10.8 4.2002C7.15492 4.2002 4.2 7.15512 4.2 10.8002C4.2 14.4453 7.15492 17.4002 10.8 17.4002Z" stroke="white"/>
+                            <path d="M15.3444 15.3445L20.4 20.4001L15.3444 15.3445Z"/>
+                            <path d="M15.3444 15.3445L20.4 20.4001" stroke="white"/>
+                            </svg>
+                    </a>
+                    <a href="#none" class="icon cart">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                            <path d="M18.1324 6.54045H16.2387V6.3424C16.1551 5.27391 15.6707 4.27634 14.8828 3.54982C14.0949 2.8233 13.0612 2.42164 11.9895 2.42482C10.9177 2.42801 9.88672 2.83621 9.10312 3.5674C8.31953 4.29859 7.84092 5.29804 7.76367 6.36701V6.54045H5.86641C5.58325 6.54077 5.31194 6.65312 5.11172 6.85334C4.9115 7.05356 4.79915 7.32487 4.79883 7.60803V19.8307C4.79883 20.114 4.91146 20.3849 5.11172 20.5854C5.31197 20.7859 5.58304 20.8991 5.86641 20.8994H18.1312C18.4146 20.8991 18.6857 20.7859 18.8859 20.5854C19.0862 20.3849 19.1988 20.114 19.1988 19.8307V7.60685C19.1982 7.32412 19.0859 7.05327 18.8859 6.85334C18.686 6.65341 18.4152 6.54108 18.1324 6.54045ZM8.89219 6.39514C8.93871 5.60611 9.29214 4.867 9.87773 4.33615C10.4633 3.8053 11.2336 3.52478 12.0234 3.55568C12.8046 3.52145 13.568 3.79868 14.1457 4.3256C14.7235 4.85253 15.069 5.58597 15.1066 6.36701V6.54045H8.89922L8.89219 6.39514ZM5.93086 19.8354V7.67014L7.7625 7.66193V9.91193H8.89336V7.65607L15.1078 7.62443V9.91193H16.2398V7.6174L18.0691 7.60803L18.1324 19.7674L5.93086 19.8354Z"/>
+                        </svg>
+                    </a>
+                    <a href="#none" class="login">LOGIN</a>
+                </div>
+
+                <a href="#none" id="hamburger">
+                    <span></span><span></span><span></span>
+                </a>
+    
+            </div>
+        </div>
+  
+       
+
+        <div class="banner">
+            <div class="swiper banner-img">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="banner-txt">
+                            <p>NU-FRAME</p>
+                            <P>NEW ITEM</P>
+                            <span>더 알아보기<span>
+                        </div>
+            
+                        <img src="./img/banner1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-txt">
+                            <p>NU-FRAME</p>
+                            <P>NEW ITEM</P>
+                            <span>더 알아보기<span>
+                        </div>
+                        <img src="./img/banner2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-txt">
+                            <p>NU-FRAME</p>
+                            <P>NEW ITEM</P>
+                            <span>더 알아보기<span>
+                        </div>
+                        <img src="./img/banner3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-txt">
+                            <p>NU-FRAME</p>
+                            <P>NEW ITEM</P>
+                            <span>더 알아보기<span>
+                        </div>
+                        <img src="./img/banner4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-txt">
+                            <p>NU-FRAME</p>
+                            <P>NEW ITEM</P>
+                            <span>더 알아보기<span>
+                        </div>
+                        <img src="./img/banner5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="live">
+            <div class="container">
+                <div class="live-box">
+                    <div class="live-img">
+                        <img src="./img/live.jpg" alt="">
+                    </div>
+                    <div class="live-txt">
+                        <div class="p">
+                            <p>시손즈 6인조</p>
+                            <p class="color">LIVE</p>
+                        </div>
+                        <span>시손즈 6인조 홈쇼핑 한정 스페셜 기프트를 증정합니다 !</span>
+                        <div class="click">혜택 자세히 보기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sec-1">
+            <div class="container">
+                <div class="sect-l-box">
+                    <div class="sect-1 sect-img">
+                        <div class="sect-txt">
+                            <h3>odense X 일광전구</h3>
+                            <span>따뜻한 빛을 선사하는 일광의 조명과 세밀하게 <br>
+                                가공된 세라믹과의 만남을 확인해보세요. <br>
+                                공간의 따스함을 전해줍니다 -!</span>
+                        </div>
+                    </div>
+                    <ul class="sec-b">
+                        <li data-image="./img/33-3.jpg" class="secb-img">
+                            <img src="./img/조명3.png" alt="">
+                        </li>
+                        <li data-image="./img/5-5.jpg" class="secb-img">
+                            <img src="./img/조명4.png" alt="">
+                        </li>
+                        <li data-image="./img/4-4.jpg" class="secb-img">
+                            <img src="./img/조명5.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sect-r-box">
+                    <div class="sect-r-img top">
+                        <img src="./img/조명r1.png" alt="">
+                    </div>
+                    <div class="sect-r-img bottom">
+                        <img src="./img/조명r2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec-2">
+            <div class="container">
+                <div class="sec2-title">
+                    <h1 class="h-title">DESSERT PLATES</h1>
+                    <div class="arrow-r"></div>
+                </div>
+                <div class="sec2-r-box">
+                    <div class="sec2-r-box1">
+                        <img src="./img/sec2.png" alt="">
+                    </div>
+                    <div class="box2">
+                        <div class="box2-con-wrap">
+                            <div class="con-box feed1">
+                                <div class="con-back">
+                                    <div class="con-txt">
+                                        <h5>NU-FRAME F SET</h5>
+                                        <span>롱머그</span>
+                                        <p>2p</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con-box feed2">
+                                <div class="con-back">
+                                    <div class="con-txt">
+                                        <h5>NU-FRAME F SET</h5>
+                                        <span>커크러리 레스트 칼럼</span>
+                                        <p>2p</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con-box feed3">
+                                <div class="con-back">
+                                    <div class="con-txt">
+                                        <h5>NU-FRAME F SET</h5>
+                                        <span>미디움 플레이트</span>
+                                        <p>2p</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con-box feed4">
+                                <div class="con-back">
+                                    <div class="con-txt">
+                                        <h5>NU-FRAME F SET</h5>
+                                        <span>파스타볼</span>
+                                        <p>2p</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con-box feed5">
+                                <div class="con-back">
+                                    <div class="con-txt">
+                                        <h5>NU-FRAME F SET</h5>
+                                        <span>레미킨</span>
+                                        <p>2p</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con-box feed6">
+                                <div class="con-back">
+                                    <div class="con-txt">
+                                        <h5>NU-FRAME F SET</h5>
+                                        <span>PAKAGE-SET</span>
+                                        <p>1</p>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="sec-3">
+            <div class="container">
+                <div class="sec3-title">
+                    <h1 class="h-title">PROMOTION</h1>
+                    <div class="arrow-r"></div>
+                </div>
+                <div class="promotion">
+                    <div class="pro1">
+                        <div class="pro-img">
+                            <img src="./img/pro1.jpg" alt="">
+                        </div>
+                        <div class="pro-txt">
+                            <p>홈파티 플레이팅 UP TO 30%</p>
+                        </div>
+                    </div>
+                    <div class="pro2">
+                        <div class="pro-img">
+                            <img src="./img/pro2.jpg" alt="">
+                        </div>
+                        <div class="pro-txt">
+                            <p>누프레임 세트 구매시 스페셜 사은품 증정</p>
+                        </div>
+                    </div>
+                    <div class="pro3">
+                        <div class="pro-img">
+                            <img src="./img/pro3.jpg" alt="">
+                        </div>
+                        <div class="pro-txt">
+                            <p>기프트 패키지 선물 세트 추천</p>
+                        </div>
+                    </div>
+                    <div class="pro4">
+                        <div class="pro-img">
+                            <img src="./img/pro4.jpg" alt="">
+                        </div>
+                        <div class="pro-txt">
+                            <p>홈데코 스완 조명 20% 스페셜 쿠폰 지급</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec-4">
+            <div class="container">
+                <div class="sec4-title">
+                    <h1 class="h-title">COLLECTION</h1>
+                </div>
+                <div class="collect">
+                    <div class="collect-box box4">
+                        <div class="box-wrap">
+                            <div class="box">
+                                <div class="collect-img">
+                                    <img src="./img/new1.png" alt="">
+                                </div>
+                                <div class="collect-txt">
+                                    <h5>UN-FRAME</h5>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="collect-img">
+                                    <img src="./img/new2.png" alt="">
+                                </div>
+                                <div class="collect-txt">
+                                    <h5>LEGJODT</h5>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="collect-img">
+                                    <img src="./img/new3.png" alt="">
+                                </div>
+                                <div class="collect-txt">
+                                    <h5>NORD</h5>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="collect-img">
+                                    <img src="./img/new4.png" alt="">
+                                </div>
+                                <div class="collect-txt">
+                                    <h5>SISSONNE</h5>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="collect-img">
+                                    <img src="./img/new5.png" alt="">
+                                </div>
+                                <div class="collect-txt">
+                                    <h5>LAGODA</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="sec-5">
+            <div class="container">
+                <div class="sec5-title">
+                    <h5 class="h-title">BEST ITEM</h5>
+                </div>
+                <div class="swiper-wrapbox">
+                    <div class="swiper best">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST1.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD(기획) 시손스 머그 2p 세트</span>
+                                <p>50,000</p>
+                                <div class="color">
+                                    <div class="color1"></div>
+                                    <div class="color2"></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST2.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD(기획) 레고트 파스타볼 + 레..</span>
+                                <p>57,000</p>
+                                <div class="color">
+                                    <div class="color3"></div>
+                                    <div class="color4"></div>
+                                    <div class="color5"></div>
+                                    <div class="color6"></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST3.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD 누프레임 커피컵 앤 소서 2인..</span>
+                                <p>89,000</p>
+                                <div class="color">
+                                    <div class="color7"></div>
+                                    <div class="color8"></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST4.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD 레고트 커트러리 디저트 3종</span>
+                                <p>24,000</p>
+                                <div class="color">
+                                    <div class="color3"></div>
+                                    <div class="color33"></div>
+                                    <div class="color4"></div>
+                                    <div class="color5"></div>
+                                    <div class="color6"></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST5.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD 레고트 루프 텀블러 600ml
+                                </span>
+                                <p>35,000</p>
+                                <div class="color">
+                                    <div class="color3"></div>
+                                    <div class="color5"></div>
+                                    <div class="color6"></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST6.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD 누프레임 A세트 4P
+                                </span>
+                                <p>112,000</p>
+                                <H5>선물포장 사은품</H5>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST7.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD_레고트 미니 식기세트 3P
+                                </span>
+                                <p>50,000</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="./img/BEST8.png" alt="">
+                            </div>
+                            <div class="swiper-txt">
+                                <span>OD_레고트 미니잔 4P</span>
+                                <p>40,000</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>    
+                </div>
+            </div>
+        </div>
+
+        <div class="sec-6">
+            <div class="container">
+                <div class="sec6-title">
+                    <h1 class="h-title">PRODUCT</h1>
+                </div>
+                <div class="sec-6-box">
+                    <div class="box con-1">
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>ALL</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-2">
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>PLATES</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-3">
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>BOWLS</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-4">              
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>MUGS & CUPS</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-5">        
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>CUTLERY</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-6">    
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>UTENSIL</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-7">
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>SETS</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-8">             
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>COOKWARE</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-9">             
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>HOME DECO</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box con-10">           
+                        <div class="box-back">
+                            <div class="box-txt">
+                                <h5>TUMBLERS</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="footer-t">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 160 32" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_34_2)">
+                            <path d="M11.4977 7.66553C9.22385 7.66553 7.00104 8.33976 5.11034 9.60297C3.21963 10.8662 1.74594 12.6616 0.875592 14.7623C0.00524255 16.863 -0.22268 19.1746 0.220643 21.4049C0.663965 23.6351 1.75862 25.6838 3.36621 27.2919C4.9738 28.9001 7.02213 29.9954 9.25221 30.4395C11.4823 30.8836 13.794 30.6565 15.895 29.7869C17.996 28.9172 19.7919 27.4441 21.0558 25.5539C22.3196 23.6636 22.9946 21.441 22.9954 19.1672C22.9959 17.6569 22.6989 16.1614 22.1213 14.766C21.5438 13.3706 20.6969 12.1026 19.6292 11.0345C18.5615 9.96644 17.2938 9.11917 15.8986 8.54111C14.5034 7.96305 13.0079 7.66553 11.4977 7.66553ZM11.4977 27.6C9.8304 27.5989 8.20083 27.1036 6.815 26.1765C5.42917 25.2495 4.3493 23.9324 3.71191 22.3917C3.07452 20.8511 2.90822 19.156 3.23403 17.5208C3.55985 15.8857 4.36315 14.3838 5.54239 13.2051C6.72163 12.0264 8.22386 11.2238 9.85918 10.8988C11.4945 10.5737 13.1895 10.7408 14.7298 11.3789C16.2702 12.017 17.5868 13.0975 18.5132 14.4838C19.4396 15.8701 19.9342 17.4999 19.9344 19.1672C19.9344 20.2744 19.7163 21.3708 19.2926 22.3938C18.8689 23.4167 18.2478 24.3462 17.4649 25.1291C16.682 25.9121 15.7525 26.5331 14.7295 26.9568C13.7066 27.3806 12.6102 27.5986 11.503 27.5986"/>
+                            <path d="M47.882 11.3639C46.313 9.6642 44.2678 8.47724 42.0136 7.95815C39.7594 7.43906 37.4011 7.61198 35.2467 8.45431C33.0923 9.29664 31.2421 10.7692 29.9378 12.6796C28.6335 14.59 27.9358 16.8494 27.9358 19.1626C27.9358 21.4758 28.6335 23.7352 29.9378 25.6456C31.2421 27.556 33.0923 29.0286 35.2467 29.8709C37.4011 30.7133 39.7594 30.8862 42.0136 30.3671C44.2678 29.848 46.313 28.6611 47.882 26.9613V30.278H50.9509V0H47.882V11.3639ZM39.4505 27.5948C37.783 27.5948 36.1528 27.1003 34.7663 26.1738C33.3797 25.2473 32.299 23.9305 31.6609 22.3899C31.0227 20.8492 30.8558 19.1539 31.1811 17.5184C31.5064 15.8828 32.3094 14.3805 33.4886 13.2013C34.6678 12.0222 36.1701 11.2191 37.8057 10.8938C39.4412 10.5685 41.1365 10.7355 42.6771 11.3736C44.2178 12.0118 45.5346 13.0925 46.4611 14.479C47.3875 15.8656 47.882 17.4957 47.882 19.1633C47.882 21.3994 46.9937 23.544 45.4125 25.1252C43.8313 26.7064 41.6867 27.5948 39.4505 27.5948Z"/>
+                            <path d="M68.2191 7.66563C66.1457 7.66475 64.1107 8.22452 62.3295 9.2857C60.5482 10.3469 59.0871 11.8699 58.1008 13.6937C57.1145 15.5174 56.6396 17.5739 56.7265 19.6454C56.8135 21.717 57.4589 23.7264 58.5946 25.4611C59.7303 27.1958 61.3139 28.5911 63.1777 29.4993C65.0416 30.4075 67.1164 30.7948 69.1824 30.6202C71.2484 30.4456 73.2287 29.7156 74.9137 28.5075C76.5987 27.2994 77.9257 25.6581 78.7541 23.7574H75.2814C74.3625 25.1696 73.0412 26.2737 71.4884 26.9272C69.9355 27.5807 68.2224 27.7536 66.5703 27.4234C64.9182 27.0933 63.403 26.2753 62.2206 25.0752C61.0381 23.8751 60.2427 22.348 59.9371 20.6912H79.6092C79.84 19.0653 79.7175 17.4087 79.2502 15.8344C78.7829 14.2601 77.9817 12.805 76.9012 11.5683C75.8207 10.3316 74.4863 9.34238 72.989 8.668C71.4916 7.99361 69.8665 7.64994 68.2243 7.66039M59.9384 17.6276C60.2955 15.6908 61.3199 13.9404 62.8335 12.6804C64.347 11.4204 66.2542 10.7304 68.2236 10.7304C70.1931 10.7304 72.1002 11.4204 73.6138 12.6804C75.1274 13.9404 76.1518 15.6908 76.5089 17.6276H59.9384Z"/>
+                            <path d="M157.392 19.1671C157.393 16.3201 156.34 13.5735 154.434 11.4583C152.529 9.34308 149.906 8.00951 147.075 7.7154C144.243 7.42128 141.403 8.18751 139.103 9.86594C136.803 11.5444 135.208 14.0158 134.624 16.8024C134.041 19.589 134.512 22.4929 135.945 24.9527C137.379 27.4125 139.673 29.2534 142.385 30.1196C145.098 30.9857 148.034 30.8156 150.628 29.6422C153.222 28.4687 155.289 26.3752 156.429 23.7664H152.956C152.037 25.1785 150.716 26.2827 149.163 26.9362C147.61 27.5897 145.897 27.7625 144.245 27.4324C142.593 27.1023 141.078 26.2843 139.895 25.0842C138.713 23.8841 137.917 22.357 137.612 20.7002H157.284C157.356 20.1922 157.393 19.68 157.397 19.1671M137.613 17.634C137.97 15.6972 138.995 13.9467 140.508 12.6867C142.022 11.4267 143.929 10.7368 145.898 10.7368C147.868 10.7368 149.775 11.4267 151.289 12.6867C152.802 13.9467 153.827 15.6972 154.184 17.634H137.613Z"/>
+                            <path d="M120.593 17.095C115.889 16.4013 114.218 15.8137 114.218 13.9016C114.218 11.9344 116.719 10.4419 120.037 10.4419C123.2 10.4419 125.448 11.7914 126.11 14.0655H129.49C128.845 10.0498 125.34 7.66553 120.037 7.66553C113.768 7.66553 110.911 10.9665 110.911 14.0327C110.911 18.0432 114.257 19.2786 120.035 20.0537C125.795 20.7777 126.887 21.9501 126.887 23.857C126.887 25.836 124.694 27.8413 120.505 27.8413C116.921 27.8413 114.142 26.1495 113.486 23.6039H110.123C110.91 27.9672 114.845 30.6596 120.506 30.6596C126.216 30.6596 130.052 27.8386 130.052 23.6393C130.052 18.855 126.132 17.9082 120.594 17.0937"/>
+                            <path d="M96.5809 7.66553H93.3993C92.3512 7.74756 91.3352 8.06506 90.4269 8.59437C89.5186 9.12369 88.7414 9.85116 88.1534 10.7226V8.04717H85.0872V30.2518H88.1534V16.0747C88.1575 14.6542 88.7246 13.2933 89.7302 12.2902C90.7359 11.287 92.0982 10.7233 93.5186 10.7226H96.5849C98.0067 10.7233 99.3702 11.288 100.376 12.2929C101.382 13.2978 101.948 14.6608 101.95 16.0826V30.2465H105.016V16.0826C105.016 14.9762 104.797 13.8808 104.373 12.859C103.949 11.8372 103.327 10.9089 102.544 10.1273C101.761 9.34562 100.832 8.7259 99.8095 8.3035C98.787 7.88111 97.6912 7.66433 96.5849 7.66553"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_34_2">
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="footer-b">
+                    <div class="footer-content">
+                        <div class="content1">
+                            <p><a href="#none">이용약관</a></p>
+                            <p><a href="#none">이용안내</a></p>
+                            <p><a href="#none">법적고지</a></p>
+                            <p><a href="#none">공지사항</a></p>
+                            <p><a href="#none">고객센터</a></p>
+                            <p><a href="#none">멤버십혜택</a></p>
+                            <p><a href="#none">개인정보처리방침</a></p>
+                        </div>
+                        <div class="content2">
+                            <p><a href="#none">STORES</a></p>
+                            <p><a href="#none">FAQ</a></p>
+                            <p><a href="#none" class="insta">
+                                <svg viewBox="0 0 30 27"  xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0033 6.44188C10.7468 6.44188 7.31344 9.46884 7.31344 13.2216C7.31344 16.9743 10.7468 20.0012 15.0033 20.0012C19.2599 20.0012 22.6933 16.9743 22.6933 13.2216C22.6933 9.46884 19.2599 6.44188 15.0033 6.44188ZM15.0033 17.6292C12.2526 17.6292 10.0039 15.6526 10.0039 13.2216C10.0039 10.7905 12.246 8.81388 15.0033 8.81388C17.7607 8.81388 20.0028 10.7905 20.0028 13.2216C20.0028 15.6526 17.754 17.6292 15.0033 17.6292ZM24.8015 6.16455C24.8015 7.04373 23.9983 7.74589 23.0078 7.74589C22.0106 7.74589 21.2142 7.03783 21.2142 6.16455C21.2142 5.29128 22.0173 4.58322 23.0078 4.58322C23.9983 4.58322 24.8015 5.29128 24.8015 6.16455ZM29.8946 7.76949C29.7808 5.65121 29.232 3.77485 27.4718 2.22892C25.7183 0.682983 23.5901 0.199142 21.1874 0.092933C18.7111 -0.0309777 11.2889 -0.0309777 8.8126 0.092933C6.41662 0.193242 4.28834 0.677083 2.52817 2.22302C0.767987 3.76895 0.225878 5.64531 0.10541 7.76359C-0.0351366 9.94678 -0.0351366 16.4904 0.10541 18.6736C0.219186 20.7919 0.767987 22.6683 2.52817 24.2142C4.28834 25.7601 6.40993 26.244 8.8126 26.3502C11.2889 26.4741 18.7111 26.4741 21.1874 26.3502C23.5901 26.2499 25.7183 25.766 27.4718 24.2142C29.2253 22.6683 29.7741 20.7919 29.8946 18.6736C30.0351 16.4904 30.0351 9.95268 29.8946 7.76949ZM26.6955 21.0161C26.1735 22.1726 25.1629 23.0636 23.8444 23.5297C21.8701 24.2201 17.1852 24.0608 15.0033 24.0608C12.8215 24.0608 8.12995 24.2142 6.1623 23.5297C4.85053 23.0695 3.83993 22.1785 3.31121 21.0161C2.52817 19.2755 2.70887 15.1451 2.70887 13.2216C2.70887 11.298 2.53486 7.16174 3.31121 5.42699C3.83324 4.27049 4.84384 3.37951 6.1623 2.91337C8.13664 2.22302 12.8215 2.38233 15.0033 2.38233C17.1852 2.38233 21.8767 2.22892 23.8444 2.91337C25.1562 3.37361 26.1668 4.26459 26.6955 5.42699C27.4785 7.16764 27.2978 11.298 27.2978 13.2216C27.2978 15.1451 27.4785 19.2814 26.6955 21.0161Z"/>
+                                    </svg>
+                                    
+                            </a></p>
+                            <p><a href="#none" class="youtube">
+                               <svg viewBox="0 0 40 27" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M39.1642 4.13745C38.7041 2.50886 37.3487 1.22623 35.6277 0.790952C32.5084 0 20 0 20 0C20 0 7.49171 0 4.37226 0.790952C2.65129 1.2263 1.29587 2.50886 0.835839 4.13745C0 7.08937 0 13.2483 0 13.2483C0 13.2483 0 19.4072 0.835839 22.3591C1.29587 23.9877 2.65129 25.2169 4.37226 25.6522C7.49171 26.4431 20 26.4431 20 26.4431C20 26.4431 32.5083 26.4431 35.6277 25.6522C37.3487 25.2169 38.7041 23.9877 39.1642 22.3591C40 19.4072 40 13.2483 40 13.2483C40 13.2483 40 7.08937 39.1642 4.13745ZM15.9091 18.8401V7.65645L26.3636 13.2484L15.9091 18.8401Z"/>
+                                </svg>
+                            </a></p>
+                        </div>
+                    </div>
+                  
+
+                    <div class="content3">
+                        <p>(주)브랜드웍스코리아 대표이사 : 박춘하 | 주소 : 04323 서울특별시 용산구 한강대로 372 (동자동) 16층, 브랜드웍스코리아| 사업자 등록번호 : 211-86-68230 <br>
+                            통신판매업신고 : 제 2022-서울용산-1708호 [사업자정보확인] | 개인정보보호책임자 : 고객서비스혁신담당 박춘하 | 대표번호 1577-0103 | <br>
+                            제휴/협찬/입점 : odense1@cj.net | 호스팅 제공자 : 카페24(주)</p>
+                        <span><small>COPYRIGHT © BRANDWORKSKOREA ALL RIGHTS RESERVED.</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-btn">
+            <img src="./img/gotop.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
